@@ -9,12 +9,12 @@ url_list = pd.read_csv('/Users/nicholasmaloof/CodingProjects/WebScrap/groupon/gr
 driver = webdriver.Chrome()
 
 #---Set up the csv to write the answers in---#
-csv_file = open('groupon_reviews_1.csv', 'w')
+csv_file = open('groupon_reviews_4.csv', 'w')
 writer = csv.writer(csv_file)
 writer.writerow(['author', 'date', 'content', 'url'])
 
 #---Iterate through the list of urls---#
-for url in url_list.url[0:50]:
+for url in url_list.url[150:200]:
 	try:
 		driver.get(url)
 		time.sleep(2)
